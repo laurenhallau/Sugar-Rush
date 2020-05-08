@@ -1,0 +1,19 @@
+{
+  "name": "sugar-rush",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sever.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laurenhallau/Sugar-Rush.git"
+  },
+  "author": "Gold Team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laurenhallau/Sugar-Rush/issues"
+  },
+  "homepage": "https://github.com/laurenhallau/Sugar-Rush#readme"
+}
