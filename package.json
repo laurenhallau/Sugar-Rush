@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/laurenhallau/Sugar-Rush/issues"
   },
-  "homepage": "https://github.com/laurenhallau/Sugar-Rush#readme"
+  "homepage": "https://github.com/laurenhallau/Sugar-Rush#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.13"
+  }
 }
