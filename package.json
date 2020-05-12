@@ -19,6 +19,7 @@
   "dependencies": {
     "axios": "^0.19.2",
     "express": "^4.17.1",
+    "materialize-css": "^1.0.0-rc.2",
     "mongoose": "^5.9.13"
   }
 }
