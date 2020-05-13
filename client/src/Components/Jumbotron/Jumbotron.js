@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./style.css";
-import { UserView } from "react-materialize";
+
 
 const jumbotronStyle = {
   paddingBottom: "150px",
