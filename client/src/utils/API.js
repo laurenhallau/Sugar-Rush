@@ -8,4 +8,19 @@ export default {
   search: function (query) {
     return axios.get(BASEURL + query + APIKEY);
   },
+  getMongoData: function(query){
+    return axios.get("mongodb://localhost/reactsugarrush")
+    .then(function(response) {
+      if (response.status === 200 && response != null) {
+        var data = response.data.name
+        return data
+      } else {
+        throw new Error('Empty data')
+      }
+    })
+    .catch(function(error) {
+      console.log(error)
+      return [] // Return empty array in case error response.
+    })
+  }
 };
