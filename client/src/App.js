@@ -15,6 +15,7 @@ function App() {
       <Jumbotron />
       <MainContent />
       <SearchResultsCard />
+      <Cart />
       <Footer />
     </div>
   );
