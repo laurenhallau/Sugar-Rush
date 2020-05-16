@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Row, Col, Card, Icon, CardTitle, Button } from "react-materialize";
+import { Col, Card, Icon, CardTitle, Button } from "react-materialize";
 import API from "../../utils/API";
 import "./style.css";
 
