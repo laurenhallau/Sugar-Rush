@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import { Navbar, NavItem, Icon, } from "react-materialize";
+import {Link} from 'react-router-dom';
 
 class Header extends Component {
   render() {
     return (
       <Navbar
-        alignLinks="left"
+        alignLinks="right"
         brand={
           <a className="brand-logo" href="/" alt="Sugar Rush logo">
             Sugar Rush
@@ -26,8 +27,15 @@ class Header extends Component {
           preventScrolling: true,
         }}
       >
+        <Link to="/cart">
+          My Cart
+          </Link>
         <NavItem onClick={function noRefCheck() {}}>Sign Up</NavItem>
         <NavItem href="components.html">Log In</NavItem>
+        
+          
+       
+      
       </Navbar>
     );
   }

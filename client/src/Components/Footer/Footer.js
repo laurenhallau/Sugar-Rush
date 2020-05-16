@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import {Footer} from "react-materialize";
 import "./style.css"
+import {Link} from 'react-router-dom';
 
 class pageFooter extends Component{
   render(){
@@ -12,9 +13,9 @@ class pageFooter extends Component{
           links={
             <ul>
               <li>
-                <a className="grey-text text-lighten-3" href="#!">
-                 Home
-                </a>
+              <Link to="/">
+          Home
+          </Link>
               </li>
               <li>
                 <a className="grey-text text-lighten-3" href="#!">
