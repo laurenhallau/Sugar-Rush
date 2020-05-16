@@ -1,11 +1,26 @@
-import React from "react";
+import React, { Component } from "react";
 import { Row, Col, Card, Icon, CardTitle, Button } from "react-materialize";
-import db from "../../utils/API";
+import API from "../../utils/API";
 import "./style.css";
 
-class SearchResultsCard extends React.Component {
+class SearchResultsCard extends Component {
+//Create a State Object 
+  state = {
+    restaurants: []
+  }
+
+  componentDidMount = () => {
+    API.getRestaurants().then( data => {
+        this.setState({
+          restaurants:data.data
+        })
+    })
+  };
   render() {
+    //Dot notate through the state object 
+    console.log(this.state.restaurants);
     return (
+      <div>
       <Row>
         <Col m={4} s={12}>
           <Card
@@ -20,11 +35,11 @@ class SearchResultsCard extends React.Component {
             revealIcon={<Icon>more_vert</Icon>}
           >
             <ul>
-              <li className="restaurant-name">Restaurant Name</li>
+              <li className="restaurant-name"></li>
               <br />
-              <li> Phone: (xxx)xxx-xxxx</li>
+              <li> Phone: </li>
               <br />
-              <li> Address: xxxxxxxx</li>
+              <li> Address:(xxxx))</li>
               <br />
               <li>
                 Rating:{" "}
@@ -34,6 +49,7 @@ class SearchResultsCard extends React.Component {
           </Card>
         </Col>
       </Row>
+      </div>
       //   <Row>
       //     <Col m={4} s={12}>
       //       <Card
