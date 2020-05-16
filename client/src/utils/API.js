@@ -8,6 +8,11 @@ export default {
   search: function (query) {
     return axios.get(BASEURL + query + APIKEY);
   },
+  getRestaurants: function (req, res) {
+    console.log("Line 12 in API.js");
+    // return axios.get(BASEURL + query + APIKEY);
+    return axios.get("/api/restaurant")
+  },
   getMongoData: function(query){
     return axios.get("mongodb://localhost/reactsugarrush")
     .then(function(response) {
