@@ -1,16 +1,25 @@
-import React from "react";
+import React, { Component } from "react";
 import { Button } from "react-materialize";
 import "./style.css";
 
-const SearchArea = (props) => {
+
+class SearchArea extends Component {
+ handleButton = (e) => {
+   e.preventDefault();
+   console.log("this is", this);
+ }
+ render() {
   return (
     <div className="search-area">
       <form action="">
-        <input onChange={props.handleSearch} type="text" placeholder="What are you craving?" />
-        <Button>Search</Button>
+        <input type="text" placeholder="What are you craving?" />
+        <Button onClick={this.handleButton}>Search</Button>
       </form>
     </div>
   );
+ }
+  
 };
+
 
 export default SearchArea;
