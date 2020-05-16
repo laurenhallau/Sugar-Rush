@@ -1,45 +1,28 @@
-import React from "react";
-import { Table, Button } from "react-materialize";
-import API from "../../utils/API.js"
+import React, { Component } from "react";
+import uuid from "uuid";
 
-  
+export class Cart extends Component {
+  state = {
+    items: [
+      { id: uuid(), item: { name: "Cookie", quantity: 12, price: 10.0 } },
+      { id: uuid(), item: { name: "Pie", quantity: 12, price: 10.0 } },
+      { id: uuid(), item: { name: "Ice Cream", quantity: 12, price: 10.0 } },
+      { id: uuid(), item: { name: "Cupcake", quantity: 12, price: 10.0 } },
+    ],
+  };
 
-class Cart extends React.Component {
-
-componentWillMount() {
-    API.getMongoData().then(response => {
-      console.log('Data fetched', response)
-      this.setState({
-        data: response
-      })
-    })
-}
-    
   render() {
-    return (
-      <div className="container">
-        <h3 style={{ textAlign: "left" }}>Shopping Cart</h3>
-        <h5 style={{ textAlign: "left" }}> (Restaurant Name)</h5>
-        <Table>
-          <thead>
-            <tr>
-              <th data-field="id">Item Name</th>
-              <th data-field="quantity">Quantity</th>
-              <th data-field="price">Item Price</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-          </tbody>
-        </Table>
-        <Button>Checkout</Button>
-      </div>
-    );
+    const { items } = this.state;
+    return items.map(({ item }) => {
+      return (
+        <tbody>
+          <tr>
+            <td>{item.name}</td>
+            <td>{item.quantity}</td>
+            <td>{item.price}</td>
+          </tr>
+        </tbody>
+      );
+    });
   }
 }
-
-export default Cart;

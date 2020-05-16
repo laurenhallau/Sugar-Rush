@@ -5,7 +5,7 @@ import Header from "./Components/Header/Header.js";
 import Footer from "./Components/Footer/Footer.js";
 
 import Home from "./pages/Home";
-import Cart from "./pages/Cart";
+import ShoppingCart from "./pages/Cart.js";
 import Search from "./pages/Search";
 import SearchDetail from "./pages/SearchDetail";
 
@@ -24,7 +24,7 @@ function App() {
 
           <Route exact path="/searchdetail" component={SearchDetail} />
 
-          <Route exact path="/cart" component={Cart} />
+          <Route exact path="/cart" component={ShoppingCart} />
         </Switch>
         <Footer />
       </div>
