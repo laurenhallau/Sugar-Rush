@@ -3,6 +3,7 @@ import { Row, Col, Card, Icon, CardTitle, Button } from "react-materialize";
 import API from "../../utils/API";
 import "./style.css";
 
+
 class SearchResultsCard extends Component {
 //Create a State Object 
   state = {
@@ -21,7 +22,10 @@ class SearchResultsCard extends Component {
     console.log(this.state.restaurants);
     return (
       <div>
-      <Row>
+      {this.state.restaurants.map(restaurant => {
+        
+        console.log("huh", restaurant);
+        return <div>
         <Col m={4} s={12}>
           <Card
             className="restaurant-card"
@@ -35,11 +39,11 @@ class SearchResultsCard extends Component {
             revealIcon={<Icon>more_vert</Icon>}
           >
             <ul>
-              <li className="restaurant-name"></li>
+              <li className="restaurant-name">{restaurant.name}</li>
               <br />
               <li> Phone: </li>
               <br />
-              <li> Address:(xxxx))</li>
+              <li> Address: {restaurant.location.address}</li>
               <br />
               <li>
                 Rating:{" "}
@@ -48,7 +52,10 @@ class SearchResultsCard extends Component {
             </ul>
           </Card>
         </Col>
-      </Row>
+        </div>
+   })}
+        
+      
       </div>
       //   <Row>
       //     <Col m={4} s={12}>
