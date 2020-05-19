@@ -4,9 +4,17 @@ import "./style.css";
 
 
 class SearchArea extends Component {
+  constructor (props) {
+    super(props);
+    this.state = {
+      btnClick: false
+    }
+  }
+
  handleButton = (e) => {
    e.preventDefault();
-   console.log("this is", this);
+
+   console.log("i've been clicked!", this.props.handleSearchRes());
  }
  render() {
   return (
