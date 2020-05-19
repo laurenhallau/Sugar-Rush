@@ -11,7 +11,8 @@
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build",
-    "seed": "node scripts/seedDB.js"
+    "seed": "node scripts/seedDB.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
@@ -27,7 +28,8 @@
     "axios": "^0.19.2",
     "express": "^4.17.1",
     "materialize-css": "^1.0.0-rc.2",
-    "mongoose": "^5.9.13"
+    "mongoose": "^5.9.13",
+    "passport": "^0.4.1"
   },
   "devDependencies": {
     "concurrently": "^5.2.0",

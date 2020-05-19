@@ -30,8 +30,8 @@ class Header extends Component {
         <Link to="/cart">
           My Cart
           </Link>
-        <NavItem onClick={function noRefCheck() {}}>Sign Up</NavItem>
-        <NavItem href="components.html">Log In</NavItem>
+        <NavItem onClick={function noRefCheck() {}} href="/register">Sign Up</NavItem>
+        <NavItem href="/login">Log In</NavItem>
         
           
        
