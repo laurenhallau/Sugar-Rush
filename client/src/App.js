@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Component} from "react";
 import "./App.css";
 import Jumbotron from "./Components/Jumbotron/Jumbotron.js";
 import Header from "./Components/Header/Header.js";
@@ -13,8 +13,14 @@ import SearchDetail from "./pages/SearchDetail";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-function App() {
-  return (
+import { Provider } from "react-redux";
+import store from "./store";
+
+class App extends Component {
+  render(){
+    return (
+        <Provider store={store}>
+  
     <Router>
       <div className="App">
         <Header />
@@ -35,7 +41,12 @@ function App() {
         <Footer />
       </div>
     </Router>
-  );
+ 
+  </Provider>
+     );
+  }
+
+
 }
 
 export default App;
