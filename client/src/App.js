@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import "./App.css";
 import Jumbotron from "./Components/Jumbotron/Jumbotron.js";
 import Header from "./Components/Header/Header.js";
@@ -28,7 +28,7 @@ if (localStorage.jwtToken) {
   const decoded = jwt_decode(token);
   // Set user and isAuthenticated
   store.dispatch(setCurrentUser(decoded));
-// Check for expired token
+  // Check for expired token
   const currentTime = Date.now() / 1000; // to get in milliseconds
   if (decoded.exp < currentTime) {
     // Logout user
@@ -39,39 +39,35 @@ if (localStorage.jwtToken) {
 }
 
 class App extends Component {
-  render(){
+  render() {
     return (
-        <Provider store={store}>
-  
-    <Router>
-      <div className="App">
-        <Header />
-        <Jumbotron />
-        <Switch>
-          <Route exact path="/" component={Home} />
+      <Provider store={store}>
+        <Router>
+          <div className="App">
+            <Header />
+            <Jumbotron />
+            <Switch>
+              <Route exact path="/" component={Home} />
 
-          <Route exact path="/register" component={Register} />
-          
-          <Route exact path="/login" component={Login} />
+              <Route exact path="/register" component={Register} />
 
-          <Route exact path="/search" component={Search} />
+              <Route exact path="/login" component={Login} />
 
-          <Route exact path="/searchdetail" component={SearchDetail} />
+              <Route exact path="/search" component={Search} />
 
-          <Route exact path="/cart" component={ShoppingCart} />
-          <Switch>
-              <PrivateRoute exact path="/dashboard" component={Dashboard} />
+              <Route exact path="/searchdetail" component={SearchDetail} />
+
+              <Route exact path="/cart" component={ShoppingCart} />
+              <Switch>
+                <PrivateRoute exact path="/dashboard" component={Dashboard} />
+              </Switch>
             </Switch>
-        </Switch>
-        <Footer />
-      </div>
-    </Router>
- 
-  </Provider>
-     );
+            <Footer />
+          </div>
+        </Router>
+      </Provider>
+    );
   }
-
-
 }
 
 export default App;

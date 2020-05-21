@@ -1,5 +1,5 @@
 const express = require("express");
-
+const passport = require('passport');
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
@@ -14,11 +14,22 @@ if (process.env.NODE_ENV === "production") {
 }
 // Add routes, both API and view
 app.use(routes);
+app.use(passport.initialize());
+require("./config/passport")(passport)
 
 // Connect to the Mongo DB
 mongoose.connect(
   process.env.MONGODB_URI || "mongodb://localhost/reactsugarrush"
 );
+const db = require("./config/keys.js").mongoURI;
+// Connect to MongoDB
+mongoose
+  .connect(
+    db,
+    { useNewUrlParser: true }
+  )
+  .then(() => console.log("MongoDB successfully connected"))
+  .catch(err => console.log(err));
 
 // Start the API server
 app.listen(PORT, function () {
