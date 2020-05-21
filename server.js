@@ -17,7 +17,8 @@ app.use(routes);
 
 // Connect to the Mongo DB
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/reactsugarrush"
+  process.env.MONGODB_URI || "mongodb://localhost/reactsugarrush",
+  { useNewUrlParser: true }
 );
 
 // Start the API server

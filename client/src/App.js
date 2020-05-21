@@ -56,7 +56,7 @@ class App extends Component {
 
           <Route exact path="/search" component={Search} />
 
-          <Route exact path="/searchdetail" component={SearchDetail} />
+          <Route exact path="/searchdetail/:id" component={SearchDetail} />
 
           <Route exact path="/cart" component={ShoppingCart} />
           <Switch>

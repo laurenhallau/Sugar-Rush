@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Col, Card, Icon, CardTitle, Button } from "react-materialize";
 import API from "../../utils/API";
 import "./style.css";
+import {Link} from 'react-router-dom';
 
 
 class SearchResultsCard extends Component {
@@ -30,7 +31,7 @@ class SearchResultsCard extends Component {
             <Col m={4} s={12}>
                <Card
                 className="restaurant-card"
-                actions={[<Button>Order Now</Button>]}
+                actions={[<Button><Link to="/searchdetail">Order Now</Link></Button>]}
                 closeIcon={<Icon>close</Icon>}
                 header={
                   <CardTitle image="https://materializecss.com/images/sample-1.jpg">
