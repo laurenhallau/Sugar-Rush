@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import SearchResults from '../Components/SearchResults/SearchResults';
 import SearchArea from "../Components/SearchArea/SearchArea";
+import {Row} from 'react-materialize';
 
 class Home extends Component {
  state = {
@@ -17,7 +18,10 @@ class Home extends Component {
       <div>
         <h1>Home Page</h1>
         <SearchArea handleSearchRes={this.handleSearchRes}/>
-        <SearchResults searchRes={this.state.searchResult}/>
+        <Row>
+          <SearchResults searchRes={this.state.searchResult}/>
+        </Row>
+        
       </div>
     );
   }

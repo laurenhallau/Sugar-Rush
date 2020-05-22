@@ -12,14 +12,39 @@ export class Cart extends Component {
   };
 
   render() {
+    const increment = () => {
+      console.log("Add button clicked");
+    };
+
+    const decrement = () => {
+      console.log("Subtract button clicked");
+    };
+
+    const clear = () => {
+      console.log("Clear button clicked");
+    };
+
     const { items } = this.state;
     return items.map(({ item }) => {
       return (
         <tbody>
           <tr>
             <td>{item.name}</td>
-            <td>{item.quantity}</td>
+            <td>
+              <i className="tiny material-icons" style={{ margin: "0px 5px" }} onClick={decrement}>
+                remove_circle_outline
+              </i>
+              {item.quantity}
+              <i className="tiny material-icons" style={{ margin: "0px 5px" }} onClick={increment}>
+                add_circle_outline
+              </i>
+            </td>
             <td>{item.price}</td>
+            <td>
+              <i className="tiny material-icons" onClick={clear}>
+                clear
+              </i>
+            </td>
           </tr>
         </tbody>
       );
