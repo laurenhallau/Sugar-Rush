@@ -1,8 +1,13 @@
 import React from "react";
 import { Button, Table, Container } from "react-materialize";
 import { Cart as ShoppingCart } from "../Components/CartTable/Cart.js";
+import { Link } from "react-router-dom";
 
 function Cart() {
+  const checkoutBtn = () => {
+    console.log("Checkout button clicked");
+  };
+
   return (
     <div className="cart-container">
       <Container>
@@ -17,8 +22,10 @@ function Cart() {
             </tr>
           </thead>
           <ShoppingCart />
-          <Button style={{ marginBottom: "2rem" }}>Checkout</Button>
         </Table>
+        <Button onClick={checkoutBtn} style={{ marginBottom: "2rem" }}>
+          <Link to="/">Checkout</Link>
+        </Button>
       </Container>
     </div>
   );
