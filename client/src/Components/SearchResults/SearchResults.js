@@ -26,6 +26,17 @@ class SearchResultsCard extends Component {
 
   renderCard=()=>{
 
+    let imageStyle ={
+      height:200,
+      width:250,
+      margin:20
+    }
+
+    let CardStyle={
+      width:340,
+      height:600
+    }
+
    return this.state.restaurants.map(item =>{
      console.log("jack", item)
       return <div>
@@ -34,13 +45,14 @@ class SearchResultsCard extends Component {
                 className="restaurant-card"
                 actions={[<Button><Link to="/searchdetail">Order Now</Link></Button>]}
                 closeIcon={<Icon>close</Icon>}
+                style={CardStyle}
                 header={
-                  <CardTitle image="https://materializecss.com/images/sample-1.jpg">
-                    Restaurant Type (donuts, cupcakes etc..)
-                  </CardTitle>
+                  <CardTitle image={item.img} style={imageStyle} />
+                
                 }
                 revealIcon={<Icon>more_vert</Icon>}
               >
+                <hr/>
                 <ul>
                   <li className="restaurant-name">{item.name}</li>
                   <br />
