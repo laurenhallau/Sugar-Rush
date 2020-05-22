@@ -7,6 +7,7 @@ mongoose.connect(
 
 const restaurantSeed = [
   {
+    id: 1,
     name: "Rita's Italian Ice",
     dessertOne: {
       description: "Italian Ice",
@@ -25,6 +26,7 @@ const restaurantSeed = [
     phone_number: "(651) 207-5727",
   },
   {
+    id: 2,
     name: "Adele's",
     dessertOne: {
       description: "Custard",
@@ -46,6 +48,7 @@ const restaurantSeed = [
     phone_number: "(952) 470-0035",
   },
   {
+    id: 3, 
     name: "Licks Unlimited",
     dessertOne: {
       description: "Ice Cream", 
@@ -63,6 +66,7 @@ const restaurantSeed = [
     phone_number: "(952) 474-4791",
   },
   {
+    id: 4,
     name: "Patisserie 46",
     dessertOne: {
       description: "Macarons",
@@ -84,6 +88,7 @@ const restaurantSeed = [
     phone_number: "(612) 354-3257",
   },
   {
+    id: 5,
     name: "Rustica",
     dessertOne: {
       description: "Cookies",
@@ -101,6 +106,7 @@ const restaurantSeed = [
     phone_number: "(612) 822-1119",
   },
   {
+    id: 6,
     name: "Glam Doll Donuts",
     dessertOne: {
       description: "Donuts",
@@ -114,6 +120,7 @@ const restaurantSeed = [
     phone_number: "(612) 345-7064",
   },
   {
+    id: 7,
     name: "Sebastian Joe's Ice Cream Cafe",
     dessertOne: {
       description: "Ice Cream",
@@ -135,6 +142,7 @@ const restaurantSeed = [
     phone_number: "(612) 870-0065",
   },
   {
+    id: 8,
     name: "Wuollet Bakery",
     dessertOne: {
       description: "Donut",
@@ -156,6 +164,7 @@ const restaurantSeed = [
     phone_number: "(612) 922-4341",
   },
   {
+    id: 9,
     name: "Nothing Bundt Cakes",
     dessertOne: {
       description: "Cakes",
@@ -174,6 +183,7 @@ const restaurantSeed = [
     phone_number: "(952) 546-1406",
   },
   {
+    id: 10,
     name: "Cocoa & Fig",
     dessertOne: {
       description: "Macaron",
@@ -195,6 +205,7 @@ const restaurantSeed = [
     phone_number: "(312) 333-1485",
   },
   {
+    id: 11, 
     name: "Patisserie Margo",
     dessertOne: {
       description: "Macaron",
@@ -216,6 +227,7 @@ const restaurantSeed = [
     phone_number: "(952) 926-0548",
   },
   {
+    id: 12,
     name: "Cone Brothers Ice Cream",
     dessertOne: {
       description: "Ice Cream",
