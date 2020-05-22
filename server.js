@@ -8,6 +8,7 @@ const PORT = process.env.PORT || 3001;
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
@@ -19,17 +20,9 @@ require("./config/passport")(passport)
 
 // Connect to the Mongo DB
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/reactsugarrush"
+  process.env.MONGODB_URI || "mongodb://localhost/reactsugarrush",
+  { useNewUrlParser: true }
 );
-const db = require("./config/keys.js").mongoURI;
-// Connect to MongoDB
-mongoose
-  .connect(
-    db,
-    { useNewUrlParser: true }
-  )
-  .then(() => console.log("MongoDB successfully connected"))
-  .catch(err => console.log(err));
 
 // Start the API server
 app.listen(PORT, function () {
