@@ -24,6 +24,7 @@ const restaurantSeed = [
     },
     price_range: 1,
     phone_number: "(651) 207-5727",
+    img:"../images/Ritas-Italian-Ice.jpg"
   },
   {
     id: 2,
@@ -46,6 +47,7 @@ const restaurantSeed = [
     },
     price_range: 3,
     phone_number: "(952) 470-0035",
+    img:"../images/Adeles.png"
   },
   {
     id: 3, 
@@ -64,6 +66,7 @@ const restaurantSeed = [
     },
     price_range: 2,
     phone_number: "(952) 474-4791",
+    img:"../images/Licks-Unlimited.jpg"
   },
   {
     id: 4,
@@ -86,6 +89,7 @@ const restaurantSeed = [
     },
     price_range: 3,
     phone_number: "(612) 354-3257",
+    img:"../images/patisserie46.jpg"
   },
   {
     id: 5,
@@ -104,6 +108,7 @@ const restaurantSeed = [
     },
     price_range: 4,
     phone_number: "(612) 822-1119",
+    img:"../images/Rustica.jpg"
   },
   {
     id: 6,
@@ -118,10 +123,11 @@ const restaurantSeed = [
     },
     price_range: 5,
     phone_number: "(612) 345-7064",
+    img:"../images/GlamDoll.jpg"
   },
   {
     id: 7,
-    name: "Sebastian Joe's Ice Cream Cafe",
+    name: "Sebastian Joe's Ice Cream",
     dessertOne: {
       description: "Ice Cream",
       price: 4,
@@ -140,6 +146,7 @@ const restaurantSeed = [
     },
     price_range: 4,
     phone_number: "(612) 870-0065",
+    img:"../images/SebastianJoe.jpg"
   },
   {
     id: 8,
@@ -162,6 +169,7 @@ const restaurantSeed = [
     },
     price_range: 4,
     phone_number: "(612) 922-4341",
+    img:"../images/Wuollet.png"
   },
   {
     id: 9,
@@ -181,6 +189,7 @@ const restaurantSeed = [
     },
     price_range: 5,
     phone_number: "(952) 546-1406",
+    img:"../images/NothingBundtCakes.jpg"
   },
   {
     id: 10,
@@ -203,6 +212,7 @@ const restaurantSeed = [
     },
     price_range: 8,
     phone_number: "(312) 333-1485",
+    img:"../images/CocoaFig.png"
   },
   {
     id: 11, 
@@ -225,6 +235,7 @@ const restaurantSeed = [
     },
     price_range: 3,
     phone_number: "(952) 926-0548",
+    img:"../images/PatisserieMargo.jpg"
   },
   {
     id: 12,
@@ -247,6 +258,7 @@ const restaurantSeed = [
     },
     price_range: 4,
     phone_number: "(612) 455-0452",
+    img:"../images/ConeBrothers.jpg"
   },
 ];
 
