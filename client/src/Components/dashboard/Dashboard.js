@@ -25,7 +25,7 @@ return (
                 borderRadius: "3px",
                 letterSpacing: "1.5px",
                 marginTop: "1rem"
-              }}className="btn btn-large waves-effect waves-light hoverable aqua accent-3" href="/">Home</button>
+              }}className="btn btn-large waves-effect waves-light hoverable aqua accent-3">Home</button>
             <button
               style={{
                 width: "150px",
