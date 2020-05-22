@@ -46,22 +46,27 @@ class App extends Component {
           <div className="App">
             <Header />
             <Jumbotron />
-            <Switch>
-              <Route exact path="/" component={Home} />
-
-              <Route exact path="/register" component={Register} />
-
-              <Route exact path="/login" component={Login} />
-
-              <Route exact path="/search" component={Search} />
-
-              <Route exact path="/searchdetail" component={SearchDetail} />
-
-              <Route exact path="/cart" component={ShoppingCart} />
+            <main>
+            
               <Switch>
-                <PrivateRoute exact path="/dashboard" component={Dashboard} />
+                <Route exact path="/" component={Home} />
+
+                <Route exact path="/register" component={Register} />
+
+                <Route exact path="/login" component={Login} />
+
+                <Route exact path="/search" component={Search} />
+
+                <Route exact path="/searchdetail" component={SearchDetail} />
+
+                <Route exact path="/cart" component={ShoppingCart} />
+                <Switch>
+                  <PrivateRoute exact path="/dashboard" component={Dashboard} />
+                </Switch>
               </Switch>
-            </Switch>
+            </main>
+          
+
             <Footer />
           </div>
         </Router>

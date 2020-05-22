@@ -32,6 +32,7 @@ class SearchResultsCard extends Component {
             <Col m={4} s={12}>
                <Card
                 className="restaurant-card"
+                //style={{float:"left"}}
                 actions={[<Button><Link to="/searchdetail">Order Now</Link></Button>]}
                 closeIcon={<Icon>close</Icon>}
                 header={
