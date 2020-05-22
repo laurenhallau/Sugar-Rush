@@ -27,6 +27,7 @@ class SearchResultsCard extends Component {
   renderCard=()=>{
 
    return this.state.restaurants.map(item =>{
+     console.log("jack", item)
       return <div>
             <Col m={4} s={12}>
                <Card
@@ -51,6 +52,7 @@ class SearchResultsCard extends Component {
                     Rating:{" "}
                     {<Icon className="5-stars">starsstarsstarsstarsstars</Icon>}
                   </li>
+                  <li>Known for: {item.dessertOne.description}</li>
                 </ul>
               </Card>
             </Col>

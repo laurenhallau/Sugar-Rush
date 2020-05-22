@@ -3,16 +3,17 @@ const Schema = mongoose.Schema;
 
 const restaurantSchema = new Schema({
   name: { type: String, required: true },
+  id: {type: Number},
   dessertOne: { 
-    type: String,
+    description: String,
     price: Number,
    },
    dessertTwo: { 
-    type: String,
+    description: String,
     price: Number,
    },
    dessertThree: { 
-    type: String,
+    dessert: String,
     price: Number,
    },
   location: {
