@@ -9,7 +9,7 @@ module.exports = {
       .catch((err) => res.status(400).json(err));
   },
   findById: function (req, res) {
-    db.Restaurant.findById(req.params.id)
+    db.Restaurant.find({id: req.params.id})
       .then((restaurantDb) => res.json(restaurantDb))
       .catch((err) => res.status(400).json(err));
   },

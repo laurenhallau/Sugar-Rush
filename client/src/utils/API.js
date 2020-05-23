@@ -1,5 +1,4 @@
 import axios from "axios";
-
 const BASEURL = "https://developers.zomato.com/api/v2.1/search?q=";
 const APIKEY = "3ee3d740dc7385dd0034e55132458a30";
 
@@ -8,6 +7,9 @@ const APIKEY = "3ee3d740dc7385dd0034e55132458a30";
 export default {
   search: function (query) {
     return axios.get(BASEURL + query + APIKEY);
+  },
+  getRestaurant: function(id){
+      return axios.get("/api/restaurant/"+id)
   },
   getRestaurants: function (req, res) {
     console.log("Line 12 in API.js");
