@@ -39,6 +39,9 @@ if (localStorage.jwtToken) {
 }
 
 class App extends Component {
+
+
+
   render() {
     return (
       <Provider store={store}>
@@ -46,26 +49,23 @@ class App extends Component {
           <div className="App">
             <Header />
             <Jumbotron />
-            <main>
-            
+
+            <Switch>
+              <Route exact path="/" component={Home} />
+
+              <Route exact path="/register" component={Register} />
+
+              <Route exact path="/login" component={Login} />
+
+              <Route exact path="/search" component={Search} />
+
+              <Route exact path="/restaurant/:id" component={SearchDetail} />
+
+              <Route exact path="/cart" component={ShoppingCart} />
               <Switch>
-                <Route exact path="/" component={Home} />
-
-                <Route exact path="/register" component={Register} />
-
-                <Route exact path="/login" component={Login} />
-
-                <Route exact path="/search" component={Search} />
-
-                <Route exact path="/searchdetail" component={SearchDetail} />
-
-                <Route exact path="/cart" component={ShoppingCart} />
-                <Switch>
-                  <PrivateRoute exact path="/dashboard" component={Dashboard} />
-                </Switch>
+                <PrivateRoute exact path="/dashboard" component={Dashboard} />
               </Switch>
-            </main>
-          
+            </Switch>
 
             <Footer />
           </div>

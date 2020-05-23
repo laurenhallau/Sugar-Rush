@@ -39,16 +39,16 @@ class SearchResultsCard extends Component {
 
    return this.state.restaurants.map(item =>{
      console.log("jack", item)
-      return <div>
+      return (<div>
             <Col m={4} s={12}>
                <Card
                 className="restaurant-card"
-                //style={{float:"left"}}
-                actions={[<Button><Link to="/searchdetail">Order Now</Link></Button>]}
+               
+                actions={[<Button id={item.id}><Link to={"/restaurant/" + item.id}>Order Now</Link></Button>]}
                 closeIcon={<Icon>close</Icon>}
                 style={CardStyle}
                 header={
-                  <CardTitle image={item.img} style={imageStyle} />
+                  <CardTitle key ={item.id} image={item.img} style={imageStyle} />
                 
                 }
                 revealIcon={<Icon>more_vert</Icon>}
@@ -63,13 +63,13 @@ class SearchResultsCard extends Component {
                   <br />
                   <li>
                     Rating:{" "}
-                    {<Icon className="5-stars">starsstarsstarsstarsstars</Icon>}
+                    {<Icon key={item.id} className="5-stars">starsstarsstarsstarsstars</Icon>}
                   </li>
                   <li>Known for: {item.dessertOne.description}</li>
                 </ul>
               </Card>
             </Col>
-            </div>
+            </div>)
     })
 
    
