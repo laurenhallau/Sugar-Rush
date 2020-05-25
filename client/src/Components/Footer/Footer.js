@@ -12,20 +12,20 @@ class pageFooter extends Component{
           copyrights="&copy; 2020 SugarRush"
           links={
             <ul>
-              <li>
+              <li className="grey-text text-lighten-3">
               <Link to="/">
           Home
           </Link>
               </li>
-              <li>
-                <a className="grey-text text-lighten-3" href="#!">
-                  About
-                </a>
+              <li className="grey-text text-lighten-3">
+              <Link to="/about">
+          About
+          </Link>
               </li>
               <li>
-                <a className="grey-text text-lighten-3" href="#!">
-                  Order Now
-                </a>
+              <Link to="/contact">
+          Contact Us
+          </Link>
               </li>
               <li>
                 <a className="grey-text text-lighten-3" href="#!">
@@ -37,7 +37,23 @@ class pageFooter extends Component{
         >
           <h5 className="white-text sticky-footer">Sugar Rush</h5>
           <p className="grey-text text-lighten-4">
-            You can use rows and columns here to organize your footer content.
+            
+           <form>
+            <div class="row">
+              <p>Sign up for special offers!</p>
+              <div className="input-field col s6">
+          <i className="material-icons prefix">account_circle</i>
+          <input id="icon_mail" type="tel" className="validate" />
+          <label for="icon_mail" className="white-text">Name</label>
+        </div>
+      <div className="input-field col s6">
+          <i className="material-icons prefix">mail</i>
+          <input id="icon_mail" type="tel" className="validate" />
+          <label for="icon_mail" className="white-text">Email</label>
+        </div>
+      </div>
+<button className="btn">Submit</button>
+          </form>
           </p>
         </Footer>
       </div>
