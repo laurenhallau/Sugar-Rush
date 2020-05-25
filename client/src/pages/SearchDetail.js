@@ -15,7 +15,8 @@ class SearchDetail extends Component {
       item: {
         location: {},
         dessertOne:{},
-        dessertTwo:{}
+        dessertTwo:{},
+        phone_number:{}
       },
     };
   }
@@ -75,9 +76,9 @@ class SearchDetail extends Component {
               </ul>
             </div>
             <div id="test1" className="col s12">
-              <h2>Restaurant Name Example</h2>
-              <h5>We proudly handmake fresh donuts every morning!</h5>
-              <p>Place an order using the order tab!</p>
+              <h2>{this.state.item.name}</h2>
+              <h5>{this.state.item.location.address}</h5>
+              <p>Phone Number</p>
             </div>
             <div id="test2" className="col s12 ">
               <ul className="collection with-header">

@@ -11,7 +11,9 @@ import { setCurrentUser, logoutUser } from "./actions/authActions";
 import Home from "./pages/Home";
 import ShoppingCart from "./pages/Cart.js";
 import Search from "./pages/Search";
+import Contact from "./pages/Contact"
 import SearchDetail from "./pages/SearchDetail";
+import About from "./pages/About";
 import PrivateRoute from "./Components/private-route/PrivateRoute";
 import Dashboard from "./Components/dashboard/Dashboard";
 
@@ -58,6 +60,10 @@ class App extends Component {
               <Route exact path="/login" component={Login} />
 
               <Route exact path="/search" component={Search} />
+
+              <Route exact path="/about" component={About} />
+
+              <Route exact path="/contact" component={Contact} />
 
               <Route exact path="/restaurant/:id" component={SearchDetail} />
 
