@@ -21,10 +21,10 @@ class Home extends Component {
 };
 
  handleSearchRes = () => {
-  //  console.log("searchRes");
-  //  this.setState({
-  //    searchResult: true
-  //  })
+   console.log("searchRes");
+   this.setState({
+     searchResult: true
+   })
   const filterTarget = this.state.searchQuery;
     let restaurantList = this.state.restaurants;
     let match = restaurantList.filter(i=>{
