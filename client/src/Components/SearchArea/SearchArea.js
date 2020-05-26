@@ -13,14 +13,20 @@ class SearchArea extends Component {
 
  handleButton = (e) => {
    e.preventDefault();
-
-   console.log("i've been clicked!", this.props.handleSearchRes());
+  this.props.handleSearchRes();
+  //  console.log("i've been clicked!", this.props.handleSearchRes());
  }
  render() {
   return (
     <div className="search-area">
       <form action="">
-        <input type="text" placeholder="What are you craving?" />
+        <input 
+        type="text"
+         placeholder="What are you craving?"
+         onChange={this.props.handleInputChange}
+         value={this.props.searchQuery}
+        name="searchQuery"
+          />
         <Button onClick={this.handleButton}>Search</Button>
       </form>
     </div>

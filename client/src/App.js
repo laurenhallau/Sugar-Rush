@@ -16,6 +16,7 @@ import SearchDetail from "./pages/SearchDetail";
 import About from "./pages/About";
 import PrivateRoute from "./Components/private-route/PrivateRoute";
 import Dashboard from "./Components/dashboard/Dashboard";
+import Checkout from "./pages/Checkout";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -80,6 +81,8 @@ class App extends Component {
                 path="/restaurant/:id"
                 component={() => <SearchDetail addToCart={this.addToCart} />}
               />
+
+              <Route exact path="/checkout" component={Checkout} />
 
               <Route exact path="/cart" component={ShoppingCart} />
               <Switch>
