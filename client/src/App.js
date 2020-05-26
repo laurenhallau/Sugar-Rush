@@ -11,7 +11,7 @@ import { setCurrentUser, logoutUser } from "./actions/authActions";
 import Home from "./pages/Home";
 import ShoppingCart from "./pages/Cart.js";
 import Search from "./pages/Search";
-import Contact from "./pages/Contact"
+import Contact from "./pages/Contact";
 import SearchDetail from "./pages/SearchDetail";
 import About from "./pages/About";
 import PrivateRoute from "./Components/private-route/PrivateRoute";
@@ -41,19 +41,18 @@ if (localStorage.jwtToken) {
 }
 
 class App extends Component {
-
   state = {
-    cart: []
-  }
+    cart: [],
+  };
 
   addToCart = (e) => {
     const dessert = {
       description: e.target.dataset.desc,
-      price: e.target.dataset.price
-    }
-    this.setState({cart:[...this.state.cart,dessert]})
-    console.log(this.state.cart)
-  }
+      price: e.target.dataset.price,
+    };
+    this.setState({ cart: [...this.state.cart, dessert] });
+    console.log(this.state.cart);
+  };
 
   render() {
     return (
@@ -76,7 +75,11 @@ class App extends Component {
 
               <Route exact path="/contact" component={Contact} />
 
-              <Route exact path="/restaurant/:id" component={() => <SearchDetail addToCart={this.addToCart}/>} />
+              <Route
+                exact
+                path="/restaurant/:id"
+                component={() => <SearchDetail addToCart={this.addToCart} />}
+              />
 
               <Route exact path="/cart" component={ShoppingCart} />
               <Switch>
