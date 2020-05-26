@@ -3,6 +3,7 @@ import { Button, Table, Container } from "react-materialize";
 import { Cart as ShoppingCart } from "../Components/CartTable/Cart.js";
 import { Link } from "react-router-dom";
 
+
 function Cart() {
   const checkoutBtn = () => {
     console.log("Checkout button clicked");

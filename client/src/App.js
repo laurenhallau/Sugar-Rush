@@ -11,11 +11,12 @@ import { setCurrentUser, logoutUser } from "./actions/authActions";
 import Home from "./pages/Home";
 import ShoppingCart from "./pages/Cart.js";
 import Search from "./pages/Search";
-import Contact from "./pages/Contact"
+import Contact from "./pages/Contact";
 import SearchDetail from "./pages/SearchDetail";
 import About from "./pages/About";
 import PrivateRoute from "./Components/private-route/PrivateRoute";
 import Dashboard from "./Components/dashboard/Dashboard";
+import Checkout from "./pages/Checkout";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -41,9 +42,6 @@ if (localStorage.jwtToken) {
 }
 
 class App extends Component {
-
-
-
   render() {
     return (
       <Provider store={store}>
@@ -66,6 +64,8 @@ class App extends Component {
               <Route exact path="/contact" component={Contact} />
 
               <Route exact path="/restaurant/:id" component={SearchDetail} />
+
+              <Route exact path="/checkout" component={Checkout} />
 
               <Route exact path="/cart" component={ShoppingCart} />
               <Switch>
