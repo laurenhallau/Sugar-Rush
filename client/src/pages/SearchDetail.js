@@ -86,13 +86,13 @@ class SearchDetail extends Component {
                 <li className="collection-item">
                   <div>
                    <p>{this.state.item.dessertOne.description}</p> 
-                    {/* <a href="" className="secondary=content">Add to Cart</a> */}
+                    <button onClick = {this.props.addToCart} data-desc={this.state.item.dessertOne.description} data-price={this.state.item.dessertOne.price} className="secondary=content">Add to Cart</button>
                   </div>
                 </li>
                 <li className="collection-item">
                   <div>
                   <p>{this.state.item.dessertTwo.description}</p> 
-                    {/* <a href="" className="secondary=content">Add to Cart</a> */}
+                    <button onClick = {this.props.addToCart} data-desc= {this.state.item.dessertTwo.description} data-price={this.state.item.dessertTwo.price} className="secondary=content">Add to Cart</button>
                   </div>
                 </li>
               </ul>

@@ -42,6 +42,19 @@ if (localStorage.jwtToken) {
 }
 
 class App extends Component {
+  state = {
+    cart: [],
+  };
+
+  addToCart = (e) => {
+    const dessert = {
+      description: e.target.dataset.desc,
+      price: e.target.dataset.price,
+    };
+    this.setState({ cart: [...this.state.cart, dessert] });
+    console.log(this.state.cart);
+  };
+
   render() {
     return (
       <Provider store={store}>
@@ -63,7 +76,11 @@ class App extends Component {
 
               <Route exact path="/contact" component={Contact} />
 
-              <Route exact path="/restaurant/:id" component={SearchDetail} />
+              <Route
+                exact
+                path="/restaurant/:id"
+                component={() => <SearchDetail addToCart={this.addToCart} />}
+              />
 
               <Route exact path="/checkout" component={Checkout} />
 
