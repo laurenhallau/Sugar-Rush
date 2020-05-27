@@ -6,6 +6,7 @@ const jumbotronStyle = {
   paddingBottom: "150px",
   boxShadow: "0px 0px 0px 0px rgba(0,0,0,0)",
   backgroundImage: `url(${"./images/Sugar_Rush-background.jpg"})`,
+  height: "400px"
   
 };
 

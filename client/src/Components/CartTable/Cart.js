@@ -82,7 +82,7 @@ export class Cart extends Component {
               add_circle_outline
             </i>
           </td>
-          <td>{item.price}</td>
+          <td>$ {item.price}</td>
           <td>
             <i className="tiny material-icons" onClick={() => clear(item._id)}>
               clear

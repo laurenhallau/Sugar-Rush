@@ -50,7 +50,7 @@ class Home extends Component {
  }
  handleInputChange = event => {
   console.log("event", event.target);
-  const { name, value } = event.target.value
+  const { name, value } =  event.target.value
   this.setState({
     [name]: value
   })

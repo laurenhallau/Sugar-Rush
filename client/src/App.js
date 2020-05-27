@@ -85,8 +85,8 @@ class App extends Component {
         {!this.state.done ? (
           <div style={loadStyle}>
             <ReactLoading
-              type={"bars"}
-              color={"black"}
+              type={"balls"}
+              color={"teal"}
               text="Loading your content..."
               height={"200px"}
               width={"200px"}
