@@ -1,6 +1,9 @@
 import React from "react";
 
+
 function Contact() {
+
+
   return (
     <div className="container">
       <h3 style={{ textAlign: "center" }}>Contact</h3>
@@ -36,7 +39,10 @@ function Contact() {
           <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
           <label for="icon_prefix2">Message</label>
         </div>
+       
       </div>
+      
+      {/* <a className="waves-effect waves-light btn">Send</a> */}
           </form>
       </div>
     </div>

@@ -17,11 +17,10 @@ import About from "./pages/About";
 import PrivateRoute from "./Components/private-route/PrivateRoute";
 import Dashboard from "./Components/dashboard/Dashboard";
 import Checkout from "./pages/Checkout";
-
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
 import { Provider } from "react-redux";
 import store from "./store";
+import M from "materialize-css";
 
 if (localStorage.jwtToken) {
   // Set auth token header auth
@@ -46,6 +45,7 @@ class App extends Component {
     cart: [],
   };
 
+ 
   addToCart = (e) => {
     const dessert = {
       description: e.target.dataset.desc,
@@ -54,6 +54,8 @@ class App extends Component {
     this.setState({ cart: [...this.state.cart, dessert] });
     console.log(this.state.cart);
   };
+
+
 
   render() {
     return (

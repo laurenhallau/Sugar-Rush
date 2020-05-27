@@ -3,6 +3,7 @@ import {Footer} from "react-materialize";
 import "./style.css"
 import {Link} from 'react-router-dom';
 
+
 class pageFooter extends Component{
   render(){
     return (
@@ -27,11 +28,6 @@ class pageFooter extends Component{
           Contact Us
           </Link>
               </li>
-              <li>
-                <a className="grey-text text-lighten-3" href="#!">
-                  Top Rated
-                </a>
-              </li>
             </ul>
           }
         >
@@ -44,15 +40,16 @@ class pageFooter extends Component{
               <div className="input-field col s6">
           <i className="material-icons prefix">account_circle</i>
           <input id="icon_mail" type="tel" className="validate" />
-          <label for="icon_mail" className="white-text">Name</label>
+          <label className="white-text">Name</label>
         </div>
       <div className="input-field col s6">
           <i className="material-icons prefix">mail</i>
           <input id="icon_mail" type="tel" className="validate" />
-          <label for="icon_mail" className="white-text">Email</label>
+          <label className="white-text">Email</label>
         </div>
+        {/* <SubmitButton onClick={this.handleSubmit} /> */}
       </div>
-<button className="btn">Submit</button>
+
           </form>
           </p>
         </Footer>
