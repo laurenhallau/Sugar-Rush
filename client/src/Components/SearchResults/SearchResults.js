@@ -17,7 +17,7 @@ class SearchResultsCard extends Component {
   
   componentDidMount = () => {
 
-    API.getRestaurant().then( data => {
+    API.getRestaurants().then( data => {
         this.setState({
           restaurants:data.data
         })
@@ -37,7 +37,7 @@ class SearchResultsCard extends Component {
       height:600
     }
 
-  this.state.restaurants.map(item =>{
+  return this.state.restaurants.map(item =>{
      console.log("jack", item)
       return (
       <div>
