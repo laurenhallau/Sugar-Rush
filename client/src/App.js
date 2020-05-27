@@ -22,6 +22,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import { Provider } from "react-redux";
 import store from "./store";
+import API from "./utils/API";
 
 if (localStorage.jwtToken) {
   // Set auth token header auth
@@ -50,9 +51,13 @@ class App extends Component {
     const dessert = {
       description: e.target.dataset.desc,
       price: e.target.dataset.price,
+      quantity: 1
     };
     this.setState({ cart: [...this.state.cart, dessert] });
-    console.log(this.state.cart);
+    API.addToCart(this.state.cart).then(
+      console.log(this.state.cart)
+    )
+    
   };
 
   render() {
