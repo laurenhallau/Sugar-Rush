@@ -37,8 +37,8 @@ class SearchResultsCard extends Component {
       height:600
     }
 
-  return this.state.restaurants.map(item =>{
-     console.log("jack", item)
+  return this.props.searchRes.map(item =>{
+     
       return (
       <div>
             <Col m={4} s={12}>
