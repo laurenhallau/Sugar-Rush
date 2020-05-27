@@ -9,7 +9,7 @@ export default {
     return axios.get(BASEURL + query + APIKEY);
   },
   getRestaurant: function(id){
-      return axios.get("/api/restaurant/"+id)
+      return axios.get("/api/restaurant/"+ id)
   },
   getRestaurants: function (req, res) {
     console.log("Line 12 in API.js");

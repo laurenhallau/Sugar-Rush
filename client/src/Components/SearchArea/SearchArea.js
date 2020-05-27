@@ -23,7 +23,7 @@ class SearchArea extends Component {
         <input 
         type="text"
          placeholder="What are you craving?"
-         onChange={this.props.handleInputChange}
+         onSubmit={this.props.handleInputChange}
          value={this.props.searchQuery}
         name="searchQuery"
           />
