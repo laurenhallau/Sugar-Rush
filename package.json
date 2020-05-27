@@ -27,6 +27,7 @@
   "dependencies": {
     "axios": "^0.19.2",
     "bcryptjs": "^2.4.3",
+    "bootstrap": "^4.5.0",
     "concurrently": "^5.2.0",
     "express": "^4.17.1",
     "if-env": "^1.0.4",
@@ -36,6 +37,9 @@
     "mongoose": "^5.9.13",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
+    "react-fade-in": "^1.0.0",
+    "react-loading": "^2.0.3",
+    "react-lottie": "^1.2.3",
     "validator": "^13.0.0"
   },
   "devDependencies": {
