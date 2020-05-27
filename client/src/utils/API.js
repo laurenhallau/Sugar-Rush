@@ -16,6 +16,20 @@ export default {
     // return axios.get(BASEURL + query + APIKEY);
     return axios.get("/api/restaurant")
   },
+  renderCart: function(data){
+    return axios.get("/api/cart", data)
+  },
+
+  addToCart: function(data){
+    console.log("hit the route", data);
+    return axios.post("/api/cart", data);
+  },
+  updateCart:function(data){
+    return axios.put("/api/cart", data)
+  },
+  removeFromCart: function(data){
+    return axios.delete("/api/cart/" + data._id);
+  },
   getMongoData: function(query){
     return axios.get("mongodb://localhost/reactsugarrush")
     .then(function(response) {

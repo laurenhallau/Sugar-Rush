@@ -18,7 +18,7 @@ function Cart() {
           <thead>
             <tr>
               <th data-field="name">Item Name</th>
-              <th data-field="name">Quanitity</th>
+              <th data-field="name">Quantity</th>
               <th data-field="price">Item Price</th>
             </tr>
           </thead>

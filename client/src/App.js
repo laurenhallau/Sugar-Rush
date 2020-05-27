@@ -17,7 +17,6 @@ import About from "./pages/About";
 import PrivateRoute from "./Components/private-route/PrivateRoute";
 import Dashboard from "./Components/dashboard/Dashboard";
 import Checkout from "./pages/Checkout";
-// import Loading from "./Loading.js";
 import ReactLoading from "react-loading";
 import "bootstrap/dist/css/bootstrap.css";
 
@@ -25,6 +24,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import { Provider } from "react-redux";
 import store from "./store";
+import API from "./utils/API";
 
 if (localStorage.jwtToken) {
   // Set auth token header auth
@@ -51,6 +51,20 @@ class App extends Component {
       done: false,
     };
   }
+
+  state = {
+    cart: [],
+  };
+
+  addToCart = (e) => {
+    const dessert = {
+      description: e.target.dataset.desc,
+      price: e.target.dataset.price,
+      quantity: 1,
+    };
+    this.setState({ cart: [...this.state.cart, dessert] });
+    API.addToCart(this.state.cart).then(console.log(this.state.cart));
+  };
 
   componentDidMount() {
     setTimeout(() => {
