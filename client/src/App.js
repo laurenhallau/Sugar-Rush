@@ -57,6 +57,7 @@ class App extends Component {
   };
 
   addToCart = (e) => {
+    console.log("clicked!!")
     const dessert = {
       description: e.target.dataset.desc,
       price: e.target.dataset.price,

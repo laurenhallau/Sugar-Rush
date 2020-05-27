@@ -19,9 +19,9 @@ class SearchArea extends Component {
  render() {
   return (
     <div className="search-area">
-      <form action="">
+      <form>
         <input 
-        type="text"
+ 
          placeholder="What are you craving?"
          onChange={this.props.handleInputChange}
          value={this.props.searchQuery}
