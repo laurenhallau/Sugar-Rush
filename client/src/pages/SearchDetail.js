@@ -1,7 +1,7 @@
 //import React, { useState, useEffect } from "react";
-import React, { Component, useState, useEffect, setItem } from "react";
+import React, { Component } from "react";
 import API from "../utils/API";
-import { Link, withRouter, useParams } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import M from "materialize-css";
 
 
@@ -45,11 +45,10 @@ class SearchDetail extends Component {
   render() {
     
     return (
-      <div className="searchDetail">
+      <div className="searchDetail container">
         <div>
           <h1>{this.state.item.name}</h1> 
-          <h3>Address: {this.state.item.location.address}</h3>
-        <h4>City: {this.state.item.location.locality}</h4> 
+         
 
           <div className="row">
             <div className="col s12">
@@ -78,11 +77,10 @@ class SearchDetail extends Component {
             <div id="test1" className="col s12">
               <h2>{this.state.item.name}</h2>
               <h5>{this.state.item.location.address}</h5>
-              <p>Phone Number</p>
             </div>
             <div id="test2" className="col s12 ">
               <ul className="collection with-header">
-                <li className="collection-header">Menu</li>
+                <li className="collection-header"><h3>Menu</h3></li>
                 <li className="collection-item">
                   <div>
                    <p>{this.state.item.dessertOne.description}</p> 
@@ -98,6 +96,7 @@ class SearchDetail extends Component {
               </ul>
             </div>
             <div id="test3" className="col s12">
+              <h3>Pet Friendly?</h3>
               <h4>Yes!</h4>
             </div>
             <div id="test4" className="col s12">

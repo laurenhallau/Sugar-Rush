@@ -15,8 +15,8 @@ class Jumbotron extends Component {
     return (
       <div className="card-panel grey lighten-2" style={jumbotronStyle}>
         <div className="container white-text">
-          <h1>Landing Page</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur...</p>
+          <h1>Sugar Rush</h1>
+          <p>Desserts. Delivered.</p>
         </div>
       </div>
     );

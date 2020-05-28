@@ -66,7 +66,7 @@ class Home extends Component {
      console.log(this.state)
     return (
       <div>
-        <h1>Home Page</h1>
+        
         <SearchArea 
         handleSearchRes={this.handleSearchRes}
         handleInputChange={this.handleInputChange}

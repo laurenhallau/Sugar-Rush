@@ -13,27 +13,25 @@ class pageFooter extends Component {
           links={
             <ul>
               <li className="grey-text text-lighten-3">
-                <Link to="/">Home</Link>
+                <Link style={{textDecoration: "none", color:"black"}} to="/">Home</Link>
               </li>
               <li className="grey-text text-lighten-3">
-                <Link to="/about">About</Link>
+                <Link style={{textDecoration: "none", color:"black"}} to="/about">About</Link>
               </li>
               <li>
-                <Link to="/contact">Contact Us</Link>
-              </li>
-              <li>
-                <a className="grey-text text-lighten-3" href="#!">
-                  Top Rated
-                </a>
+                <Link style={{textDecoration: "none", color:"black"}} to="/contact">Contact Us</Link>
               </li>
             </ul>
           }
         >
           <h5 className="white-text sticky-footer">Sugar Rush</h5>
+          <p>Sign up for special offers!</p>
           <p className="grey-text text-lighten-4">
             <form>
               <div className="row">
-                <p>Sign up for special offers!</p>
+                
+                </div>
+                <div className="row">
                 <div className="input-field col s4">
                   <i className="material-icons prefix">account_circle</i>
                   <input id="icon_mail" type="tel" className="validate" />

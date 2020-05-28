@@ -21,7 +21,6 @@ import ReactLoading from "react-loading";
 import "bootstrap/dist/css/bootstrap.css";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
 import { Provider } from "react-redux";
 import store from "./store";
 import API from "./utils/API";
@@ -54,6 +53,7 @@ class App extends Component {
   }
  
 
+ 
   addToCart = (e) => {
     console.log("clicked!!")
     const dessert = {
