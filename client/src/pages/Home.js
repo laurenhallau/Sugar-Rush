@@ -25,16 +25,19 @@ class Home extends Component {
    this.setState({
      searchResult: true
    })
-  const filterTarget = this.state.searchQuery;
+  const filterTarget = this.state.searchQuery.toLocaleLowerCase()
     let restaurantList = this.state.restaurants;
+    console.log('Thisis our filter Target', filterTarget)
     let match = restaurantList.filter(i=>{
-            // console.log(i.name)
-            let restName = i.name.toLocaleLowerCase();
-            console.log(restName)
-            if (this.state.searchQuery !== restName){
-              return 'No Match'
+
+            let restName = i.name.substring(0, filterTarget.length).toLocaleLowerCase()
+            if (filterTarget === restName){
+              return restName
             };
-           return restName
+      
+            // console.log(i.name)
+        
+          // return restName
 
     })
     console.log('mathc', match)
@@ -45,19 +48,22 @@ class Home extends Component {
   //       // console.log("values", values)
   //       return values.indexOf(filterTarget.toLowerCase()) !== -1;
   //   })
-  //   // this.setState({filteredRestaurant:restaurantList});
+   this.setState({filteredRestaurant: match});
   //   console.log(restaurantList);
  }
  handleInputChange = event => {
   console.log("event", event.target);
-  const { name, value } = event.target.value
+  const { name, value } =  event.target
   this.setState({
     [name]: value
+  }, function() {
+    this.handleSearchRes()
   })
  }
 
   render() {
-    // console.log(this.state.searchQuery)
+
+     console.log(this.state)
     return (
       <div>
         
@@ -67,7 +73,7 @@ class Home extends Component {
         searchQuery={this.state.searchQuery}
         />
         <Row>
-          <SearchResults searchRes={this.state.searchResult}/>
+          <SearchResults searchRes={this.state.filteredRestaurant}/>
         </Row>
         
       </div>

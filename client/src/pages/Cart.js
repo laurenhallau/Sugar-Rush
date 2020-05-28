@@ -17,9 +17,9 @@ function Cart() {
         <Table>
           <thead>
             <tr>
-              <th data-field="name">Item Name</th>
-              <th data-field="name">Quanitity</th>
-              <th data-field="price">Item Price</th>
+              <th data-field="name" style={{textAlign:"left"}}>Item Name</th>
+              <th data-field="name" style={{textAlign:"left"}}>Quantity</th>
+              <th data-field="price"style={{textAlign:"left"}}>Item Price</th>
             </tr>
           </thead>
           <ShoppingCart />
