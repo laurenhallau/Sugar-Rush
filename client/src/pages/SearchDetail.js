@@ -45,7 +45,7 @@ class SearchDetail extends Component {
   render() {
     
     return (
-      <div className="searchDetail">
+      <div className="searchDetail container">
         <div>
           <h1>{this.state.item.name}</h1> 
          
@@ -77,7 +77,6 @@ class SearchDetail extends Component {
             <div id="test1" className="col s12">
               <h2>{this.state.item.name}</h2>
               <h5>{this.state.item.location.address}</h5>
-              {/* <p>{this.state.item.phone_number}</p> */}
             </div>
             <div id="test2" className="col s12 ">
               <ul className="collection with-header">
@@ -97,6 +96,7 @@ class SearchDetail extends Component {
               </ul>
             </div>
             <div id="test3" className="col s12">
+              <h3>Pet Friendly?</h3>
               <h4>Yes!</h4>
             </div>
             <div id="test4" className="col s12">

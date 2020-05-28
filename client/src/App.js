@@ -17,20 +17,13 @@ import About from "./pages/About";
 import PrivateRoute from "./Components/private-route/PrivateRoute";
 import Dashboard from "./Components/dashboard/Dashboard";
 import Checkout from "./pages/Checkout";
-<<<<<<< HEAD
-=======
 import ReactLoading from "react-loading";
 import "bootstrap/dist/css/bootstrap.css";
 
->>>>>>> b4a2508c96000724dc253ac5e1af99d0b3b25213
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./store";
-<<<<<<< HEAD
-import M from "materialize-css";
-=======
 import API from "./utils/API";
->>>>>>> b4a2508c96000724dc253ac5e1af99d0b3b25213
 
 if (localStorage.jwtToken) {
   // Set auth token header auth
@@ -72,10 +65,6 @@ class App extends Component {
     API.addToCart(this.state.cart).then(console.log(this.state.cart));
   };
 
-<<<<<<< HEAD
-
-
-=======
   componentDidMount() {
     setTimeout(() => {
       fetch("https://jsonplaceholder.typicode.com/posts")
@@ -84,7 +73,6 @@ class App extends Component {
     }, 2200);
     console.log("loading page");
   }
->>>>>>> b4a2508c96000724dc253ac5e1af99d0b3b25213
   render() {
     const loadStyle = {
       paddingLeft: "630px",

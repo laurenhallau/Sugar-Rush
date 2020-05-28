@@ -8,7 +8,7 @@ class Header extends Component {
       <Navbar
         alignLinks="right"
         brand={
-          <a className="brand-logo" href="/" alt="Sugar Rush logo">
+          <a style={{textDecoration: "none", color:"white"}} className="brand-logo" href="/" alt="Sugar Rush logo">
             Sugar Rush
           </a>
         }
@@ -27,11 +27,11 @@ class Header extends Component {
           preventScrolling: true,
         }}
       >
-        <Link to="/cart">
+        <Link style={{textDecoration: "none", color:"white"}} to="/cart">
           My Cart
           </Link>
-        <NavItem onClick={function noRefCheck() {}} href="/register">Sign Up</NavItem>
-        <NavItem href="/login">Log In</NavItem>
+        <NavItem style={{textDecoration: "none", color:"white"}} onClick={function noRefCheck() {}} href="/register">Sign Up</NavItem>
+        <NavItem style={{textDecoration: "none", color:"white"}} href="/login">Log In</NavItem>
         
           
        
