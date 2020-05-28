@@ -3,7 +3,6 @@ import { Button, Table, Container } from "react-materialize";
 import { Cart as ShoppingCart } from "../Components/CartTable/Cart.js";
 import { Link } from "react-router-dom";
 
-
 function Cart() {
   const checkoutBtn = () => {
     console.log("Checkout button clicked");
@@ -17,15 +16,21 @@ function Cart() {
         <Table>
           <thead>
             <tr>
-              <th data-field="name" style={{textAlign:"left"}}>Item Name</th>
-              <th data-field="name" style={{textAlign:"left"}}>Quantity</th>
-              <th data-field="price"style={{textAlign:"left"}}>Item Price</th>
+              <th data-field="name" style={{ textAlign: "left" }}>
+                Item Name
+              </th>
+              <th data-field="name" style={{ textAlign: "left" }}>
+                Quantity
+              </th>
+              <th data-field="price" style={{ textAlign: "left" }}>
+                Item Price
+              </th>
             </tr>
           </thead>
           <ShoppingCart />
         </Table>
         <Button onClick={checkoutBtn} style={{ marginBottom: "2rem" }}>
-          <Link to="/">Checkout</Link>
+          <Link to="/checkout">Checkout</Link>
         </Button>
       </Container>
     </div>
