@@ -55,12 +55,10 @@ class App extends Component {
     super(props);
     this.state = {
       done: false,
+      cart:[]
     };
   }
-
-  state = {
-    cart: [],
-  };
+ 
 
  
   addToCart = (e) => {
@@ -127,10 +125,10 @@ class App extends Component {
                   <Route exact path="/contact" component={Contact} />
 
                   <Route
-                    exact
-                    path="/restaurant/:id"
-                    component={SearchDetail}
-                  />
+                exact
+                path="/restaurant/:id"
+                component={() => <SearchDetail addToCart={this.addToCart} />}
+              />
 
                   <Route exact path="/checkout" component={Checkout} />
 
