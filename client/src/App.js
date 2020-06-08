@@ -19,6 +19,7 @@ import Dashboard from "./Components/dashboard/Dashboard";
 import Checkout from "./pages/Checkout";
 import ReactLoading from "react-loading";
 import "bootstrap/dist/css/bootstrap.css";
+import AccountInfo from "./pages/AccountInfo.js";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Provider } from "react-redux";
@@ -48,14 +49,12 @@ class App extends Component {
     super(props);
     this.state = {
       done: false,
-      cart:[]
+      cart: [],
     };
   }
- 
 
- 
   addToCart = (e) => {
-    console.log("clicked!!")
+    console.log("clicked!!");
     const dessert = {
       description: e.target.dataset.desc,
       price: e.target.dataset.price,
@@ -113,10 +112,12 @@ class App extends Component {
                   <Route exact path="/contact" component={Contact} />
 
                   <Route
-                exact
-                path="/restaurant/:id"
-                component={() => <SearchDetail addToCart={this.addToCart} />}
-              />
+                    exact
+                    path="/restaurant/:id"
+                    component={() => (
+                      <SearchDetail addToCart={this.addToCart} />
+                    )}
+                  />
 
                   <Route exact path="/checkout" component={Checkout} />
 
@@ -126,6 +127,11 @@ class App extends Component {
                       exact
                       path="/dashboard"
                       component={Dashboard}
+                    />
+                    <PrivateRoute
+                      exact
+                      path="/accountinfo"
+                      component={AccountInfo}
                     />
                   </Switch>
                 </Switch>
