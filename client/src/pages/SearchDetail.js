@@ -101,6 +101,27 @@ class SearchDetail extends Component {
             </div>
             <div id="test4" className="col s12">
               <h4>Great spot! 10/10!</h4> <p>-Kelly from St. Louis Park</p>
+              
+              <form>
+                <div className="row">
+                <div className="input-field col s4">
+                  <i className="material-icons prefix">account_circle</i>
+                  <input id="icon_mail" type="tel" className="validate" />
+                  <label for="icon_mail" className="white-text">
+                    Message
+                  </label>
+                </div>
+                <div className="input-field col s6">
+                  <i className="material-icons prefix">mail</i>
+                  <input id="icon_mail" type="tel" className="validate" />
+                  <label for="icon_mail" className="white-text">
+                    Name
+                  </label>
+                </div>
+              </div>
+              <button className="btn">Submit</button>
+            </form>
+              
             </div>
           </div>
         </div>
