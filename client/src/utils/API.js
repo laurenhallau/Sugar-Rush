@@ -30,6 +30,11 @@ export default {
   removeFromCart: function(data){
     return axios.delete("/api/cart/" + data._id);
   },
+
+  savePaymentInfo: function(data){
+    console.log("saved payment info!!!", data);
+    return axios.post("/api/paymentinfo", data)
+  },
   getMongoData: function(query){
     return axios.get("mongodb://localhost/reactsugarrush")
     .then(function(response) {
