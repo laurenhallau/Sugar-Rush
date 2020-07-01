@@ -28,9 +28,6 @@ class pageFooter extends Component {
           <p>Sign up for special offers!</p>
           <p className="grey-text text-lighten-4">
             <form>
-              <div className="row">
-                
-                </div>
                 <div className="row">
                 <div className="input-field col s4">
                   <i className="material-icons prefix">account_circle</i>

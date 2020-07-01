@@ -17,14 +17,10 @@ SO THAT I can satisfy by craving for sweets, support local businesses, and not p
 
 ```
 
-## API Reference 
-
-
 ## Tech/Frameworks Used
 
 * Materialize CSS Framework
 * MERN Stack
-* Zomato API
 * Passport Authentication
 
 ## Usage

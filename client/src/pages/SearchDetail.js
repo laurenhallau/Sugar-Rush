@@ -58,11 +58,11 @@ class SearchDetail extends Component {
                 }}
                 className="tabs z-depth-1"
               >
-                <li className="tab col s3">
+                <li className="tab col s3 active">
                   <a href="#test1">About</a>
                 </li>
                 <li className="tab col s3">
-                  <a className="active" href="#test2">
+                  <a href="#test2">
                     Order
                   </a>
                 </li>
@@ -100,7 +100,33 @@ class SearchDetail extends Component {
               <h4>Yes!</h4>
             </div>
             <div id="test4" className="col s12">
-              <h4>Great spot! 10/10!</h4> <p>-Kelly from St. Louis Park</p>
+              <h4>Great spot! 10/10!</h4> 
+              <p>-Kelly</p>
+              
+              <form>
+              <h4>Add your review!</h4>
+                <div className="row">
+                 
+                <div className="input-field col s4">
+                  <i className="material-icons prefix">border_color</i>
+                  <input id="icon_mail" type="tel" className="validate" />
+                  <label for="icon_mail" className="black-text">
+                    Message
+                  </label>
+                </div>
+                </div>
+                <div className="row">
+                <div className="input-field col s6">
+                  <i className="material-icons prefix">account_box</i>
+                  <input id="icon_mail" type="tel" className="validate" />
+                  <label for="icon_mail" className="black-text">
+                    Name
+                  </label>
+                </div>
+              </div>
+              <button className="btn">Submit</button>
+            </form>
+              
             </div>
           </div>
         </div>
