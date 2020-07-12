@@ -23,5 +23,6 @@ SO THAT I can satisfy by craving for sweets, support local businesses, and not p
 * MERN Stack
 * Passport Authentication
 
-## Usage
+## Deployed App
+https://sugar-gold-rush.herokuapp.com/
 
