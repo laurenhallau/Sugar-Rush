@@ -42,7 +42,7 @@
     "react-fade-in": "^1.0.0",
     "react-loading": "^2.0.3",
     "react-lottie": "^1.2.3",
-    "validator": "^13.0.0"
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "materialize-css": "^1.0.0",
